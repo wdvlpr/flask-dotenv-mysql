@@ -26,11 +26,7 @@ def index():
     cursor.execute("SELECT * FROM contatos")
     result = cursor.fetchall()
     cursor.close()
-    for x in result:
-        print(x)
-
-    #return jsonify(result)
-    return jsonify(user="lala")
+    return jsonify(result)
 
 @app.route('/contato/<id>')
 def contato(id):
